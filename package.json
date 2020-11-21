@@ -1,0 +1,16 @@
+{
+  "name": "projeto_tdd_javascript_fundamentos",
+  "version": "1.0.0",
+  "description": "Projeto desenvolvido com objetivo de aprendizagem dos princípios do TDD",
+  "main": "index.js",
+  "author": "Rafael Batista <maranata_rafa@hotmail.com>",
+  "license": "MIT",
+  "private": false,
+  "scripts": {
+    "test": "./node_modules/.bin/mocha --watch tests/**/*.spec.js"
+  },
+  "devDependencies": {
+    "chai": "^4.2.0",
+    "mocha": "^8.2.1"
+  }
+}
