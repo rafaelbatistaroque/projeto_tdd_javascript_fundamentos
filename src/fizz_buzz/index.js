@@ -7,6 +7,4 @@ const fizz_buzz = (nr) => {
   return nr;
 };
 
-function bla() {}
-function blo() {}
 export default fizz_buzz;
