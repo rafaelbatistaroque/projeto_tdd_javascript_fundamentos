@@ -2,11 +2,9 @@ import { expect } from "chai";
 import fizz_buzz from "../src/fizz_buzz";
 
 describe("Fizz Buzz", () => {
-  let MENSAGEM;
   let TIPOS;
 
   before(() => {
-    MENSAGEM = "não é possível divisão por zero";
     TIPOS = {
       FUNCTION: "function",
       BOOLEAN: "Boolean",
@@ -17,7 +15,6 @@ describe("Fizz Buzz", () => {
 
   after(() => {
     TIPOS = null;
-    MENSAGEM = null;
   });
 
   context("Smoke tests", () => {

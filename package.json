@@ -6,20 +6,32 @@
   "author": "Rafael Batista <maranata_rafa@hotmail.com>",
   "license": "MIT",
   "private": false,
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/rafaelbatistaroque/projeto_tdd_javascript_fundamentos.git"
+  },
   "scripts": {
     "test": "mocha tests/**/*.spec.js --require babel-register",
-    "test:coverage":"nyc yarn test"
+    "test:coverage": "nyc yarn test"
   },
-  "nyc":{
-    "reporter":["text", "html"],
-    "exclude": ["tests/**"]
+  "nyc": {
+    "reporter": [
+      "text",
+      "html"
+    ],
+    "exclude": [
+      "tests/**"
+    ]
   },
   "devDependencies": {
     "babel-preset-env": "^1.7.0",
     "babel-register": "^6.26.0",
     "chai": "^4.2.0",
     "mocha": "^8.2.1",
-    "nyc": "^15.1.0"
+    "node-fetch": "^2.6.1",
+    "nyc": "^15.1.0",
+    "sinon": "^9.2.1",
+    "sinon-chai": "^3.5.0"
   },
   "dependencies": {}
 }
