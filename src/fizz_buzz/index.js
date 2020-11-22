@@ -1,4 +1,5 @@
 const fizz_buzz = (nr) => {
+  if (nr === 0) return nr;
   if (nr % 3 === 0 && nr % 5 === 0) return "FizzBuzz";
   if (nr % 3 === 0) return "Fizz";
   if (nr % 5 === 0) return "Buzz";
@@ -6,4 +7,6 @@ const fizz_buzz = (nr) => {
   return nr;
 };
 
+function bla() {}
+function blo() {}
 export default fizz_buzz;

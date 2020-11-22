@@ -7,12 +7,23 @@
   "license": "MIT",
   "private": false,
   "scripts": {
-    "test": "mocha tests/**/*.spec.js --require babel-register"
+    "prepush": "yarn test:coverage",
+    "test": "mocha tests/**/*.spec.js --require babel-register",
+    "test:coverage":"nyc yarn test"
+  },
+  "nyc":{
+    "functions": 80,
+    "lines": 80,
+    "check-coverage":"true",
+    "reporter":["text", "html"],
+    "exclude": ["tests/**"]
   },
   "devDependencies": {
     "babel-preset-env": "^1.7.0",
     "babel-register": "^6.26.0",
     "chai": "^4.2.0",
-    "mocha": "^8.2.1"
-  }
+    "mocha": "^8.2.1",
+    "nyc": "^15.1.0"
+  },
+  "dependencies": {}
 }

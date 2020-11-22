@@ -1,7 +1,7 @@
 import { expect } from "chai";
 import fizz_buzz from "../src/fizz_buzz";
 
-describe.only("Fizz Buzz", () => {
+describe("Fizz Buzz", () => {
   let MENSAGEM;
   let TIPOS;
 
@@ -42,6 +42,11 @@ describe.only("Fizz Buzz", () => {
 
     it("Deve retornar o número quando não for multiplo de 3 ou 5", () => {
       let nr = 11;
+      expect(fizz_buzz(nr)).to.equal(nr);
+    });
+
+    it("Deve retornar o número quando não for zero", () => {
+      let nr = 0;
       expect(fizz_buzz(nr)).to.equal(nr);
     });
   });

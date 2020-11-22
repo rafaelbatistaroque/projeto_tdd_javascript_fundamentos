@@ -1,5 +1,15 @@
 # Fundamentos TDD - Javascript
 
+### 📦 Pacotes
+
+Ambiente de desenvolvimento:
+
+> - [Mocha](https://yarnpkg.com/package/mocha) - 8.2.1
+> - [chai](https://yarnpkg.com/package/chai) - 4.2.0
+> - [nyc](https://yarnpkg.com/package/nyc) - 15.1.0
+> - [babel-preset-env](hhttps://yarnpkg.com/package/babel-preset-env) - 1.7.0
+> - [babel-register](https://yarnpkg.com/package/babel-register) - 6.26.0
+
 ## 👉 Funcionamento - Mocha
 
 ### describe
@@ -142,4 +152,45 @@ describe("Produto", () => {
 #after
 
  */
+```
+
+## 👉 Funcionamento - nyc
+
+Auxiliar a visualização com mais detalhes da cobertura dos testes;
+
+### Configuração
+
+```json
+  "scripts": {
+    "test": "mocha tests/**/*.spec.js --require babel-register",
+    "test:coverage":"nyc yarn test" //Adicionar desta forma
+  },
+  //Incluir estas configurações.
+  "nyc":{
+    "reporter":["text", "html"],
+    "exclude": ["tests/**"]
+  },
+```
+
+**Obs:** Criar alguns uma pasta 'coverade' com arquivos para a visualização em html. Abra o arquivo index.html no browser após executar o comando `$ yarn test:coverage`. O resultado deverá ser este:
+
+![exibição de cobertura dos testes](https://user-images.githubusercontent.com/32230625/99895963-939eb100-2c62-11eb-94b0-623dac1aae82.png)
+
+### Check-coverage antes do push
+
+A fim de previnir que o projeto suba sem ser testado, podemos adicionar um limite minimo que o projeto deve ter de cobertura de testes para ser liberado para push.
+
+```json
+  "scripts": {
+    "prepush": "yarn test:coverage", //Adicionar desta forma
+    "test": "mocha tests/**/*.spec.js --require babel-register",
+    "test:coverage":"nyc yarn test"
+  },
+  "nyc":{
+    "functions": 80, //Define a porcentagem mínima da funções.
+    "lines": 80,//Define a porcentagem mínima de linhas.
+    "check-coverage":"true", // habilitar o check-coverage
+    "reporter":["text", "html"],
+    "exclude": ["tests/**"]
+  },
 ```
