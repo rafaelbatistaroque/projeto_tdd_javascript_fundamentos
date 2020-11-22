@@ -7,7 +7,7 @@
   "license": "MIT",
   "private": false,
   "scripts": {
-    "prepush": "yarn test:coverage",
+    "prepush": "./node_modules/.bin/eslint && yarn test:coverage",
     "test": "mocha tests/**/*.spec.js --require babel-register",
     "test:coverage":"nyc yarn test"
   },
