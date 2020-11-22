@@ -9,6 +9,9 @@ Ambiente de desenvolvimento:
 > - [nyc](https://yarnpkg.com/package/nyc) - 15.1.0
 > - [babel-preset-env](hhttps://yarnpkg.com/package/babel-preset-env) - 1.7.0
 > - [babel-register](https://yarnpkg.com/package/babel-register) - 6.26.0
+> - [sinon](https://yarnpkg.com/package/sinon) - 9.2.1
+> - [sinon-chai](https://yarnpkg.com/package/sinon-chai) - 3.5.0
+> - [node-fetch](https://yarnpkg.com/package/node-fetch) - 2.6.1
 
 ## 👉 Funcionamento - Mocha
 
@@ -176,3 +179,13 @@ Adicione a linha `"test:coverage":"nyc yarn test"` na propriedade script e, depo
 **Obs:** Criar alguns uma pasta 'coverade' com arquivos para a visualização em html. Abra o arquivo index.html no browser após executar o comando `$ yarn test:coverage`. O resultado deverá ser este:
 
 ![exibição de cobertura dos testes](https://user-images.githubusercontent.com/32230625/99895963-939eb100-2c62-11eb-94b0-623dac1aae82.png)
+
+## 👉 Funcionamento - SinonJs
+
+### spies
+
+Verificar "espia" se uma determinada função foi chamada.
+
+### stubs
+
+Verificar "espia" se uma determinada função foi chamada, mas impede ela de ser executada.
