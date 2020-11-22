@@ -160,12 +160,13 @@ Auxiliar a visualização com mais detalhes da cobertura dos testes;
 
 ### Configuração
 
+Adicione a linha `"test:coverage":"nyc yarn test"` na propriedade script e, depois a propriedade `"nyc"` com conforme json abaixo.
+
 ```json
   "scripts": {
     "test": "mocha tests/**/*.spec.js --require babel-register",
-    "test:coverage":"nyc yarn test" //Adicionar desta forma
+    "test:coverage":"nyc yarn test"
   },
-  //Incluir estas configurações.
   "nyc":{
     "reporter":["text", "html"],
     "exclude": ["tests/**"]

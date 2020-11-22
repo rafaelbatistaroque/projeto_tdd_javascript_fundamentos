@@ -6,6 +6,10 @@
   "author": "Rafael Batista <maranata_rafa@hotmail.com>",
   "license": "MIT",
   "private": false,
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/rafaelbatistaroque/projeto_tdd_javascript_fundamentos.git"
+  },
   "scripts": {
     "test": "mocha tests/**/*.spec.js --require babel-register",
     "test:coverage":"nyc yarn test"
